@@ -1886,3 +1886,9 @@ textarea.form-input::-webkit-resizer { display: none; }
 .copyright {
   color: var(--orange-yellow-crayola);
 }
+
+/* Add this to the existing CSS */
+.orange-bold {
+  color: var(--orange-yellow-crayola);
+  font-weight: bold;
+}
