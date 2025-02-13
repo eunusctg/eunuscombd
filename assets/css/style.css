@@ -4,7 +4,7 @@
 
 
 /**
- * copyright 2022 @codewithsadee
+ * copyright 2025 @codewithsadee
  */
 
 
@@ -1879,4 +1879,10 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .timeline-text { max-width: 700px; }
 
+}
+
+
+/* Add this to the existing CSS */
+.copyright {
+  color: var(--orange-yellow-crayola);
 }
