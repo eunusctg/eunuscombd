@@ -157,3 +157,9 @@ for (let i = 0; i < navigationLinks.length; i++) {
 
   });
 }
+
+// Hide preloader when the page is fully loaded
+window.addEventListener('load', function() {
+  const preloader = document.getElementById('preloader');
+  preloader.style.display = 'none';
+});
