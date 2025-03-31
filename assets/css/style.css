@@ -1890,6 +1890,7 @@ textarea.form-input::-webkit-resizer { display: none; }
   height: 100%;
   background: #fff;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   z-index: 9999;
@@ -1923,5 +1924,21 @@ textarea.form-input::-webkit-resizer { display: none; }
   }
   50% {
     transform: scaleY(0.5);
+  }
+}
+
+.floating-text {
+  margin-top: 20px;
+  font-size: 24px;
+  color: #3498db;
+  animation: float 2s infinite ease-in-out;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
   }
 }
