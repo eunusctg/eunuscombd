@@ -161,5 +161,18 @@ for (let i = 0; i < navigationLinks.length; i++) {
 // Hide preloader when the page is fully loaded
 window.addEventListener('load', function() {
   const preloader = document.getElementById('preloader');
-  preloader.style.display = 'none';
+  const progressBar = document.querySelector('.progress');
+  const progressText = document.querySelector('.progress-text');
+
+  let progress = 0;
+  const interval = setInterval(() => {
+    if (progress >= 100) {
+      clearInterval(interval);
+      preloader.style.display = 'none';
+    } else {
+      progress += 1;
+      progressBar.style.width = progress + '%';
+      progressText.textContent = progress + '%';
+    }
+  }, 50); // Adjust the speed of the progress as needed
 });
