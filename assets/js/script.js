@@ -168,7 +168,10 @@ window.addEventListener('load', function() {
   const interval = setInterval(() => {
     if (progress >= 100) {
       clearInterval(interval);
-      preloader.style.display = 'none';
+      preloader.style.opacity = 0;
+      setTimeout(() => {
+        preloader.style.display = 'none';
+      }, 500);
     } else {
       progress += 1;
       progressBar.style.width = progress + '%';
